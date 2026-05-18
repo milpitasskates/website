@@ -1,22 +1,22 @@
 .testimonials-section {
   position: relative;
   padding: 100px 0;
-  /* Navy → purple → red — all logo colors */
-  background: linear-gradient(135deg, var(--navy) 0%, #2a1f5e 55%, #c42d42 100%);
+  /* Red → purple — warm, no heavy navy */
+  background: linear-gradient(135deg, #c42d42 0%, #9b59b6 55%, #7d3c98 100%);
   overflow: hidden;
 }
 
 .testimonials-bg-decoration { position: absolute; inset: 0; pointer-events: none; }
 .t-blob { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.15; }
-/* Cyan blob — logo speed line color */
-.t-blob-1 { width: 600px; height: 600px; background: var(--cyan);   top: -200px; right: -100px; }
-/* Gold blob — logo speed line color */
-.t-blob-2 { width: 400px; height: 400px; background: var(--gold);   bottom: -100px; left: -100px; }
+/* Gold blob */
+.t-blob-1 { width: 600px; height: 600px; background: var(--gold);   top: -200px; right: -100px; }
+/* Purple blob */
+.t-blob-2 { width: 400px; height: 400px; background: var(--purple); bottom: -100px; left: -100px; }
 
-/* Eyebrow in cyan */
+/* Eyebrow in gold */
 .t-eyebrow {
   display: inline-block;
-  color: var(--cyan);
+  color: var(--gold);
   font-size: 0.9rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 2px;
   margin-bottom: 12px;
@@ -152,7 +152,7 @@
 .t-form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
 .t-form-group input:focus,
 .t-form-group textarea:focus {
-  border-color: var(--cyan);
+  border-color: var(--gold);
   background: rgba(255,255,255,0.14);
 }
 .t-form-group input.error,

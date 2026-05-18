@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  /* Navy → purple → red — all from the logo */
-  background: linear-gradient(135deg, var(--navy) 0%, #2a1f5e 45%, #c42d42 100%);
+  /* Red → purple — logo colors, no heavy navy */
+  background: linear-gradient(135deg, #c42d42 0%, #9b59b6 55%, #7d3c98 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -18,7 +18,7 @@
   animation: blobFloat 8s ease-in-out infinite;
 }
 .hero-blob-1 { width: 500px; height: 500px; background: var(--red);    top: -100px; right: -100px; animation-delay: 0s; }
-.hero-blob-2 { width: 400px; height: 400px; background: var(--cyan);   bottom: -50px; left: -80px; animation-delay: 3s; }
+.hero-blob-2 { width: 400px; height: 400px; background: var(--purple); bottom: -50px; left: -80px; animation-delay: 3s; }
 .hero-blob-3 { width: 300px; height: 300px; background: var(--gold);   top: 40%; left: 40%; animation-delay: 5s; }
 
 @keyframes blobFloat {

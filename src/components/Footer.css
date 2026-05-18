@@ -3,29 +3,29 @@
 .footer-wave { line-height: 0; background: var(--white); }
 .footer-wave svg { width: 100%; height: 60px; display: block; }
 
-/* Navy footer — from logo */
-.footer-body { background: var(--navy); padding: 60px 0 32px; }
+/* Footer — red → purple gradient, no navy */
+.footer-body {
+  background: linear-gradient(135deg, var(--red-dark) 0%, var(--purple-dark) 100%);
+  padding: 60px 0 32px;
+}
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 48px; margin-bottom: 48px;
 }
 
-/* Brand */
 .footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
 .footer-logo-wrap img {
   width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
 }
 .footer-brand-name { font-family: 'Pacifico', cursive; font-size: 1.2rem; color: var(--white); }
 
-/* Purple tagline — logo color */
-.footer-tagline { font-family: 'Pacifico', cursive; font-size: 0.9rem; color: var(--purple-light); margin-bottom: 12px; }
+/* Gold tagline */
+.footer-tagline { font-family: 'Pacifico', cursive; font-size: 0.9rem; color: var(--gold); margin-bottom: 12px; }
 
-.footer-desc { font-size: 0.875rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 20px; }
+.footer-desc { font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 20px; }
 
-/* Instagram gradient button */
 .footer-ig-btn {
   display: inline-flex; align-items: center; gap: 8px;
   background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
@@ -34,35 +34,32 @@
 }
 .footer-ig-btn:hover { opacity: 0.85; }
 
-/* Columns */
 .footer-col h4 {
   font-size: 0.875rem; font-weight: 800; color: var(--white);
   text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;
 }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul li { font-size: 0.875rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
-.footer-col ul li a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
-/* Red hover — logo color */
-.footer-col ul li a:hover { color: var(--red-light); }
+.footer-col ul li { font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.4; }
+.footer-col ul li a { color: rgba(255,255,255,0.65); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--gold); }
 
-/* Red CTA button */
 .footer-cta-btn {
   display: inline-flex; align-items: center; gap: 6px;
-  background: var(--red); color: var(--white);
-  padding: 10px 22px; border-radius: 50px;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.4);
+  color: var(--white); padding: 10px 22px; border-radius: 50px;
   font-size: 0.875rem; font-weight: 800;
   margin-top: 20px; transition: all 0.2s ease;
 }
-.footer-cta-btn:hover { background: var(--red-dark); transform: translateY(-2px); }
+.footer-cta-btn:hover { background: rgba(255,255,255,0.25); border-color: var(--white); }
 
-/* Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.15);
   padding-top: 24px;
   display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; gap: 8px;
 }
-.footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+.footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
 
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }

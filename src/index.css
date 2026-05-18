@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap');
 
 :root {
-  /* ── Brand palette pulled directly from the logo ── */
-  --red:        #e63950;   /* skate boot / heart */
-  --red-dark:   #c42d42;
-  --red-light:  #ff6b82;
-  --navy:       #1a1f4b;   /* boot base / text */
-  --navy-light: #2a3170;
-  --gold:       #f5a623;   /* yellow speed line */
-  --cyan:       #29c4d4;   /* blue speed line */
-  --purple:     #9b59b6;   /* "Eat Sleep Skate Repeat" text */
-  --purple-light:#b07fd4;
-  --white:      #ffffff;
-  --off-white:  #f5f5f7;   /* logo background */
-  --gray-light: #ede8f5;   /* tinted with purple */
-  --gray:       #6b7280;
-  --gray-dark:  #374151;
+  /* ── Brand palette — logo only ── */
+  --red:          #e63950;
+  --red-dark:     #c42d42;
+  --red-light:    #ff6b82;
+  --gold:         #f5a623;
+  --purple:       #9b59b6;
+  --purple-dark:  #7d3c98;
+  --purple-light: #b07fd4;
+
+  /* Text / neutral — dark charcoal replaces heavy navy */
+  --ink:          #2c2c3e;   /* headings — very dark, slight purple tint */
+  --ink-light:    #4a4a6a;
+  --white:        #ffffff;
+  --off-white:    #f5f5f7;
+  --gray-light:   #f0eaf8;   /* purple-tinted */
+  --gray:         #6b7280;
+  --gray-dark:    #374151;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(26,31,75,0.08);
-  --shadow-md: 0 8px 24px rgba(26,31,75,0.12);
-  --shadow-lg: 0 20px 60px rgba(26,31,75,0.15);
+  --shadow-sm: 0 2px 8px rgba(44,44,62,0.08);
+  --shadow-md: 0 8px 24px rgba(44,44,62,0.12);
+  --shadow-lg: 0 20px 60px rgba(44,44,62,0.15);
 
   --radius:    16px;
   --radius-lg: 24px;
@@ -28,12 +30,7 @@
   font-family: 'Nunito', system-ui, sans-serif;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 body {
@@ -43,27 +40,20 @@ body {
   overflow-x: hidden;
 }
 
-#root {
-  width: 100%;
-  min-height: 100vh;
-}
+#root { width: 100%; min-height: 100vh; }
 
-h1, h2, h3, h4 { line-height: 1.2; color: var(--navy); }
+h1, h2, h3, h4 { line-height: 1.2; color: var(--ink); }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 ul { list-style: none; }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 .section-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 900;
-  color: var(--navy);
+  color: var(--ink);
   margin-bottom: 12px;
 }
 
@@ -74,22 +64,13 @@ ul { list-style: none; }
   margin: 0 auto 48px;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 56px;
-}
+.section-header { text-align: center; margin-bottom: 56px; }
 
-/* Primary button — red from logo */
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--red);
-  color: var(--white);
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 800;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red); color: var(--white);
+  padding: 14px 32px; border-radius: 50px;
+  font-size: 1rem; font-weight: 800;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(230,57,80,0.35);
 }
@@ -99,24 +80,15 @@ ul { list-style: none; }
   box-shadow: 0 8px 28px rgba(230,57,80,0.45);
 }
 
-/* Secondary button — outlined white */
 .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  color: var(--white);
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 800;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--white);
+  padding: 14px 32px; border-radius: 50px;
+  font-size: 1rem; font-weight: 800;
   border: 2px solid rgba(255,255,255,0.6);
   transition: all 0.3s ease;
 }
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: var(--white);
-}
+.btn-secondary:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--off-white); }
