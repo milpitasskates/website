@@ -1,0 +1,134 @@
+.contact-section {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.contact-eyebrow {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--purple), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.9rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px; align-items: start;
+}
+
+/* ── Instagram hero card — navy from logo ── */
+.contact-ig-hero {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px; margin-bottom: 16px;
+}
+.ig-hero-icon {
+  font-size: 2.4rem; flex-shrink: 0;
+  width: 56px; height: 56px;
+  background: rgba(255,255,255,0.1); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.ig-hero-text h3 { font-size: 1.1rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
+.ig-hero-text p  { font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 16px; }
+
+.ig-dm-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 11px 22px; margin-bottom: 12px; }
+
+/* Cyan handle link — logo color */
+.ig-handle-link {
+  display: block; font-size: 0.875rem; font-weight: 700;
+  color: var(--cyan); text-decoration: none; transition: opacity 0.2s;
+}
+.ig-handle-link:hover { opacity: 0.8; text-decoration: underline; }
+
+/* ── Info cards ── */
+.contact-info { display: flex; flex-direction: column; gap: 12px; }
+
+.contact-info-card {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: var(--gray-light);
+  border-radius: var(--radius); padding: 18px 20px;
+  transition: all 0.2s ease;
+}
+.contact-info-card:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+.contact-info-icon {
+  font-size: 1.6rem; width: 44px; height: 44px;
+  background: var(--white); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; box-shadow: var(--shadow-sm);
+}
+.contact-info-card h4 { font-size: 0.875rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+.contact-info-card p  { font-size: 0.85rem; color: var(--gray); line-height: 1.5; }
+
+/* ── Form ── */
+.contact-form-wrap {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+.contact-form { padding: 40px; }
+
+.form-title    { font-size: 1.4rem; font-weight: 900; color: var(--navy); margin-bottom: 6px; }
+.form-subtitle { font-size: 0.9rem; color: var(--gray); margin-bottom: 28px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+.form-group label { font-size: 0.875rem; font-weight: 700; color: var(--navy); }
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem; font-family: inherit;
+  color: var(--gray-dark); background: var(--white);
+  transition: border-color 0.2s ease; outline: none; width: 100%;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  /* Red focus ring — logo color */
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(230,57,80,0.1);
+}
+.form-group input.error,
+.form-group textarea.error { border-color: var(--red); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+.form-error { font-size: 0.8rem; color: var(--red); font-weight: 600; }
+
+.form-submit {
+  width: 100%; justify-content: center;
+  font-size: 1rem; padding: 15px; margin-top: 4px;
+}
+
+/* ── Success ── */
+.contact-success {
+  padding: 56px 40px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.success-icon { font-size: 3.5rem; animation: bounceIn 0.5s ease; }
+@keyframes bounceIn { 0% { transform: scale(0); } 60% { transform: scale(1.2); } 100% { transform: scale(1); } }
+.contact-success h3 { font-size: 1.7rem; font-weight: 900; color: var(--navy); }
+.contact-success p  { color: var(--gray); max-width: 380px; line-height: 1.6; font-size: 0.95rem; }
+
+.send-another-btn {
+  background: none; border: none;
+  color: var(--gray); font-size: 0.875rem; font-weight: 600;
+  cursor: pointer; text-decoration: underline; font-family: inherit; margin-top: 4px;
+}
+.send-another-btn:hover { color: var(--red); }
+
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) {
+  .contact-form { padding: 24px; }
+  .contact-success { padding: 40px 24px; }
+}

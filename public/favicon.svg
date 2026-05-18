@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="31" fill="#1a1f4b"/>
+
+  <!-- Heart -->
+  <path d="M32 46 C16 34, 8 26, 8 18 C8 11, 14 7, 20 7 C25 7, 29 10, 32 14 C35 10, 39 7, 44 7 C50 7, 56 11, 56 18 C56 26, 48 34, 32 46Z" fill="#e8365d" opacity="0.9"/>
+
+  <!-- Speed lines -->
+  <path d="M14 42 Q8 40 4 42" stroke="#ffd93d" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M15 47 Q7 46 3 49" stroke="#4ecdc4" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Skate boot -->
+  <rect x="22" y="28" width="20" height="14" rx="4" fill="#1a1f4b" stroke="#e8365d" stroke-width="1.5"/>
+  <rect x="24" y="30" width="16" height="8" rx="3" fill="#e8365d"/>
+  <!-- Laces -->
+  <line x1="27" y1="32" x2="37" y2="32" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="27" y1="35" x2="37" y2="35" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Toe cap -->
+  <path d="M42 38 Q50 38 51 43 L22 43 L22 38Z" fill="#1a1f4b" stroke="#e8365d" stroke-width="1"/>
+  <!-- Wheels -->
+  <circle cx="28" cy="46" r="4" fill="#333" stroke="#e8365d" stroke-width="1"/>
+  <circle cx="28" cy="46" r="1.8" fill="#666"/>
+  <circle cx="38" cy="46" r="4" fill="#333" stroke="#e8365d" stroke-width="1"/>
+  <circle cx="38" cy="46" r="1.8" fill="#666"/>
+</svg>

@@ -1,0 +1,111 @@
+.events-section {
+  padding: 100px 0;
+  /* Off-white from logo background */
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+  overflow: hidden;
+}
+
+.events-eyebrow {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--purple), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.9rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+/* Ticker */
+.events-ticker-wrap {
+  position: relative; overflow: hidden;
+  margin: 16px 0; padding: 8px 0;
+}
+.events-ticker-wrap::before,
+.events-ticker-wrap::after {
+  content: '';
+  position: absolute; top: 0; bottom: 0; width: 120px;
+  z-index: 2; pointer-events: none;
+}
+.events-ticker-wrap::before { left: 0;  background: linear-gradient(to right, var(--off-white), transparent); }
+.events-ticker-wrap::after  { right: 0; background: linear-gradient(to left,  var(--off-white), transparent); }
+.events-ticker-wrap-reverse::before { background: linear-gradient(to right, var(--white), transparent); }
+.events-ticker-wrap-reverse::after  { background: linear-gradient(to left,  var(--white), transparent); }
+
+.events-ticker {
+  display: flex; gap: 16px;
+  width: max-content;
+  animation: tickerScroll 40s linear infinite;
+}
+.events-ticker-reverse { animation: tickerScrollReverse 35s linear infinite; }
+
+@keyframes tickerScroll        { 0% { transform: translateX(0); }    100% { transform: translateX(-50%); } }
+@keyframes tickerScrollReverse { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+
+.events-ticker:hover,
+.events-ticker-reverse:hover { animation-play-state: paused; }
+
+/* Chips — light row */
+.event-chip {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--white);
+  border: 2px solid #e5e7eb;
+  border-radius: 50px;
+  padding: 12px 24px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  cursor: default;
+}
+.event-chip:hover {
+  border-color: var(--red);
+  box-shadow: 0 4px 16px rgba(230,57,80,0.15);
+  transform: translateY(-2px);
+}
+
+/* Dark row — navy from logo */
+.event-chip-alt {
+  background: var(--navy);
+  border-color: transparent;
+}
+.event-chip-alt .event-chip-name { color: var(--white); }
+/* Cyan year pill on dark row */
+.event-chip-alt .event-chip-year { color: var(--cyan); background: rgba(41,196,212,0.15); }
+
+.event-chip-icon { font-size: 1.3rem; }
+.event-chip-name { font-weight: 800; font-size: 0.95rem; color: var(--navy); }
+.event-chip-year {
+  font-size: 0.8rem; font-weight: 700; color: var(--gray);
+  background: var(--gray-light);
+  padding: 2px 10px; border-radius: 50px;
+}
+
+/* Achievement cards */
+.achievements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.achievement-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.achievement-card:hover {
+  border-color: var(--red);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.achievement-icon { font-size: 2.5rem; margin-bottom: 12px; }
+/* Gold numbers */
+.achievement-num  { font-size: 2.4rem; font-weight: 900; color: var(--navy); line-height: 1; margin-bottom: 8px; }
+.achievement-label { font-size: 0.9rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+
+@media (max-width: 900px) { .achievements { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .achievements { grid-template-columns: repeat(2, 1fr); gap: 16px; } .achievement-card { padding: 24px 16px; } }
